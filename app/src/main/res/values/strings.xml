@@ -1,0 +1,17 @@
+
+<resources>
+    <string name="app_name">Alarm Demo</string>
+
+    <string name="notification_title">Notification received</string>
+
+    <string name="set_date_hint">Alarm date</string>
+    <string name="set_time_hint">Alarm time</string>
+    <string name="set_message_hint">Message text</string>
+    <string name="set_button">Set</string>
+    <string name="cancel_button">Cancel</string>
+
+    <string name="notification_channel_name">AlarmDemo Notification</string>
+    <string name="notification_channel_description">Notifications for AlarmDemo-App</string>
+
+
+</resources>
