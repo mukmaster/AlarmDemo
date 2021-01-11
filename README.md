@@ -1,38 +1,44 @@
-Stand Up! Sample App (Solution Code)
-============
+AlarmDemo - Beispielprojekt
+===========================
 
-The Stand Up! Application uses the AlarmManager to schedule an inexact
-repeating alarm that delivers a notification to remind the user to stand up,
-approximately every fifteen minutes.
+Die AlarmDemo-App verwendet den AlarmManager, um zu einer vorgegebenen
+Uhrzeit eine einmalige Benachrichtigung auf dem Gerät zu erzeugen.
 
-Pre-requisites
---------------
+Bestandteile der App
+--------------------
 
-For this app you should be familiar with:
-* Creating and running apps in Android Studio.
-* Receiving Broadcast Intents in a Broadcast Receiver.
-* Creating a Notification with the Notification Builder.
-* Implementing onCheckChanged listeners for toggle buttons.
-* Scheduling alarms with AlarmManager.
-* Checking if an alarm was already set.
-* Canceling repeating alarms.
+* MainActivity: Eingabe von Datum und Uhrzeit des Alarms sowie der
+  auszugebenden Nachricht. Setzen und Löschen des Alarms über zwei
+  Buttons
+* AlarmReceiver: Ein BroadcastReceiver, der bei Erreichen der Alarmzeit
+  aktiviert wird und die Benachrichtigung ausgibt
 
+Verwendete Mechanismen
+----------------------
 
-Getting Started
----------------
+* PendingIntent: Ein PendingIntent wird verwendet, um einen Intent der
+  App zu einem späteren Zeitpunkt zu verwenden. In unserem Fall ist
+  es der Intent notifyIntent, der dafür sorgt, dass die Benachrichtigung
+  ausgegeben wird.
+* AlarmManager: Eine Klasse zum Zugriff auf den Systemdienst "ALARM_SERVICE".
+  Kann einmalige oder wiederkehrende Alarme auslösen. Die Aktion des
+  Alarms ist der im PendingIntent enthaltene Intent.
 
-1. Download and open the app in Android Studio.
+Verwendung der Demo
+-------------------
 
-License
+Das Repository kann in Android Studio heruntergeladen und gestartet werden.
+
+Quellen
 -------
 
-Copyright 2016 Google, Inc.
+Teile des Sourcecodes stammen aus dem Beispielprojekt "Stand Up!", das  
+der Entwickler-Dokumentation für Android von Google entstammt.
 
-Licensed to the Apache Software Foundation (ASF) under one or more contributor
-license agreements.  See the NOTICE file distributed with this work for
-additional information regarding copyright ownership.  The ASF licenses this
-file to you under the Apache License, Version 2.0 (the "License"); you may not
-use this file except in compliance with the License.  You may obtain a copy of
+
+Copyright 2021 Prof. Dr. Helmut Roderus, Ansbach University of Applied Sciences
+
+Licensed to the Apache Software Foundation (ASF). You may obtain a copy of
 the License at
 
   http://www.apache.org/licenses/LICENSE-2.0
